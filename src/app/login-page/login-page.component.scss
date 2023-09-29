@@ -1,0 +1,108 @@
+/* login-page.component.scss */
+.login-page {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    // background: #6b5b95;
+    // background: #3f51b5;
+    background: #333;
+    color: white;
+}
+
+.main-text {
+    font-size: 36px;
+    /* Adjust the font size as needed */
+}
+
+.sub-text {
+    font-size: 18px;
+    /* Adjust the font size as needed */
+    margin-top: 10px;
+    /* Add some spacing between the lines */
+}
+
+.right-section {
+    width: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: transform 0.5s ease;
+    /* Add a transition for smooth animation */
+}
+
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.12);
+    /* Add a border with your desired color */
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-center {
+    text-align: center;
+    min-height: 80px;
+    /* Adjust the minimum height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.button-style {
+    width: 100% !important;
+    height: 48px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    // background: #6b5b95 !important;
+    //background: #3f51b5 !important;
+    background: #333 !important;
+    color: white !important;
+}
+
+.mat-full-width {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.mat-checkbox {
+    margin-top: 16px;
+    text-align: center;
+    /* Center the "Remember Me" checkbox */
+}
+
+/* Center the "Forgot Password?" link */
+.router-link {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.content-spacing {
+    margin-top: 16px;
+    /* Adjust the margin-top value to control the spacing */
+}
+
+.field-heading {
+    margin-bottom: 5px;
+    font-size: 17px;
+}

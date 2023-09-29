@@ -1,0 +1,51 @@
+<!-- login-page.component.html -->
+<div class="login-page">
+    <div class="left-section">
+        <h1 class="main-text">Unlock My Story</h1>
+        <p class="sub-text">Log in to Discover More About Me</p>
+    </div>
+    <div class="right-section">
+        <div class="login-container">
+            <mat-card-header class="header-center">
+                <mat-card-title>Welcome Back!</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content class="content-spacing">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="field-heading">Your Email</div>
+                    <mat-form-field appearance="outline" class="mat-full-width">
+                        <mat-icon matPrefix>email</mat-icon>
+                        <input matInput formControlName="email" placeholder="e.g - john@gmail.com" type="email"
+                            required>
+                        <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Email is required</mat-error>
+                        <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Invalid email format</mat-error>
+                    </mat-form-field>
+
+                    <div class="field-heading">Your Password</div>
+                    <mat-form-field appearance="outline" class="mat-full-width">
+                        <mat-icon matPrefix>lock</mat-icon>
+                        <input matInput formControlName="password" placeholder="Password"
+                            [type]="hidePassword ? 'password' : 'text'" required>
+                        <mat-icon matSuffix (click)="togglePasswordVisibility()">{{ hidePassword ? 'visibility_off' :
+                            'visibility' }}</mat-icon>
+                        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Password is
+                            required</mat-error>
+                        <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">Password must be at least 8
+                            characters</mat-error>
+                    </mat-form-field>
+
+                    <!-- Remember Me Checkbox -->
+                    <!-- <mat-checkbox formControlName="rememberMe">Remember Me</mat-checkbox> -->
+
+                    <!-- Login Button -->
+                    <button mat-raised-button color="primary" class="button-style" type="submit">Login</button>
+                </form>
+            </mat-card-content>
+
+            <!-- Sign-Up Link -->
+            <div class="router-link">
+                <p>Don't have an account? <a routerLink="/signup">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+</div>
